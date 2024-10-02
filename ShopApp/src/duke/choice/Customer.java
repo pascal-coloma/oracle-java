@@ -10,10 +10,12 @@ package duke.choice;
  */
 public class Customer {
     
-    private String name;
+    private String name, size;
+    
 
-    public Customer(String name) {
+    public Customer(String name, String size) {
         this.name = name;
+        this.size = size;
     }
 
     public String getName() {
@@ -24,9 +26,17 @@ public class Customer {
         this.name = name;
     }
 
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+    
     @Override
     public String toString() {
-        return "Customer{" + "name=" + name + '}';
+        return "Customer \nName: " + name + "\nSize: " + size;
     }
     
     
