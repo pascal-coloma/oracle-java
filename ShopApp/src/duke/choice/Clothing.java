@@ -12,13 +12,15 @@ public class Clothing {
     
     private String description, size;
     private double price;
-
+    private final int MIN_PRICE = 10;
+    private final double TAX_RATE = 0.2;
+    
     public Clothing() {
     }
 
     public Clothing(String description, double price, String size) {
         this.description = description;
-        this.price = price;
+        setPrice(price);
         this.size = size;
     }
 
@@ -43,7 +45,12 @@ public class Clothing {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        if (price < MIN_PRICE) {
+            System.out.println("Price can't be smaller than: " + MIN_PRICE);
+        } else {
+            this.price = price + price * TAX_RATE;
+        }
+        
     }
 
     @Override
