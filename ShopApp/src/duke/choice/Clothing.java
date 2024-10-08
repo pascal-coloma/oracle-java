@@ -12,8 +12,9 @@ public class Clothing {
     
     private String description, size;
     private double price;
-    private final int MIN_PRICE = 10;
-    private final double TAX_RATE = 0.2;
+    
+    public final static int MIN_PRICE = 10;
+    public final static double TAX_RATE = 0.2;
     
     public Clothing() {
     }

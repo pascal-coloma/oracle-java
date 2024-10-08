@@ -21,7 +21,11 @@ public class ShopApp {
         int measurement = 3;
         
         System.out.println("Welcome to Duke Choice Shop!");
-        Customer c1 = new Customer("Pinky", "S");
+        
+        Customer c1 = new Customer("Pinky", "S", measurement);
+        
+        System.out.println("Minimum price: $" + Clothing.MIN_PRICE);
+        
         Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
         Clothing item2 = new Clothing("Orange T-Shirt", 10.5, "S");
         Clothing item3 = new Clothing("Green Scarf", 15, "S");
